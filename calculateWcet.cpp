@@ -100,9 +100,9 @@ void *forkForWcet(void *data)
         long long count;
         int fd;
         memset(&pe, 0, sizeof(struct perf_event_attr));
-        pe.type = PERF_TYPE_HW_CACHE ;
+        pe.type = PERF_TYPE_RAW ;
         pe.size = sizeof(struct perf_event_attr);
-        pe.config=(PERF_COUNT_HW_CACHE_L1D )|(PERF_COUNT_HW_CACHE_OP_WRITE  << 8)|(PERF_COUNT_HW_CACHE_RESULT_MISS << 16);
+        pe.config=113;
         pe.disabled = 1;
         pe.exclude_kernel = 1;
         pe.exclude_hv = 1;
