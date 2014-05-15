@@ -102,7 +102,7 @@ void *forkForWcet(void *data)
         memset(&pe, 0, sizeof(struct perf_event_attr));
         pe.type = PERF_TYPE_RAW ;
         pe.size = sizeof(struct perf_event_attr);
-        pe.config=113;
+        pe.config=112;
         pe.disabled = 1;
         pe.exclude_kernel = 1;
         pe.exclude_hv = 1;
